@@ -2,8 +2,6 @@ import './App.css';
 
 function App() {
 
-  // const button = document.querySelector("button")
-
   function startSession () {
     fetch("http://localhost:5000/create-checkout-session", {
       method: "POST",
@@ -12,8 +10,8 @@ function App() {
       },
       body: JSON.stringify({
         items: [
-          { id: 1, quantity: 3 },
-          { id: 2, quantity: 1 },
+          { id: 1, quantity: 3, name: 'learn somenthing from frontend', priceInCents: 700 },
+          { id: 2, quantity: 2, name: '2 somenthing from frontend', priceInCents: 600 },
         ],
       }),
     })
